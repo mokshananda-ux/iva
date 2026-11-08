@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block content %}
+<h1 class="text-xl font-bold">{% trans "Entrar" %}</h1>
+<form method="post">{% csrf_token %}{{ form.as_p }}
+    <button type="submit">{% trans "Entrar" %}</button>
+</form>
+{% endblock %}

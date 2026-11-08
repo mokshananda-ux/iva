@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block content %}
+<h1 class="text-xl font-bold">{% trans "Cursos" %}</h1>
+<ul>
+    {% for course in courses %}
+        <li><a href="{% url 'academy:course_detail' course.slug %}">{{ course.title }}</a></li>
+    {% empty %}
+        <li>{% trans "No hay cursos publicados." %}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

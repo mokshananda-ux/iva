@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block content %}
+<h1 class="text-xl font-bold">{% trans "Mi panel" %}</h1>
+<p>{% trans "Estado:" %} {% if is_enrolled %}{% trans "Inscrito" %}{% else %}{% trans "Registrado" %}{% endif %}</p>
+<ul>
+    {% for e in enrollments %}
+        <li>{{ e.course.title }} — {{ e.get_status_display }}</li>
+    {% empty %}
+        <li>{% trans "Aún no tienes matrículas." %}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

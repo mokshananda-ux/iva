@@ -1,0 +1,11 @@
+Django>=5.0,<5.2
+psycopg[binary]>=3.1
+Pillow>=10.0
+stripe>=9.0
+# Instalar conforme avance el proyecto:
+# django-htmx>=1.17
+# djangorestframework>=3.15   # API futura
+# celery>=5.3                 # tareas asíncronas (fase posterior)
+# redis>=5.0
+# PyMuPDF>=1.24               # PDFs
+# weasyprint>=61              # certificados PDF

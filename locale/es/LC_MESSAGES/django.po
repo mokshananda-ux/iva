@@ -1,0 +1,252 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-07 11:54-0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? "
+"1 : 2;\n"
+#: apps/academy/models.py:53
+msgid "es lección de muestra"
+msgstr ""
+
+#: apps/academy/models.py:54
+msgid "Visible para registrados sin matrícula."
+msgstr ""
+
+#: apps/academy/models.py:69
+msgid "Vídeo"
+msgstr ""
+
+#: apps/academy/models.py:70
+msgid "PDF"
+msgstr ""
+
+#: apps/academy/models.py:71
+msgid "Quiz"
+msgstr ""
+
+#: apps/academy/models.py:72
+msgid "Lab"
+msgstr ""
+
+#: apps/academy/models.py:73
+msgid "Foro"
+msgstr ""
+
+#: apps/academy/models.py:93
+msgid "Pendiente de pago"
+msgstr ""
+
+#: apps/academy/models.py:94
+msgid "Activa"
+msgstr ""
+
+#: apps/academy/models.py:95
+msgid "Suspendida"
+msgstr ""
+
+#: apps/academy/models.py:96 apps/commerce/models.py:27
+msgid "Cancelada"
+msgstr ""
+
+#: apps/accounts/admin.py:16
+msgid "Datos"
+msgstr ""
+
+#: apps/accounts/admin.py:17
+msgid "Roles"
+msgstr ""
+
+#: apps/accounts/models.py:21
+msgid "El email es obligatorio"
+msgstr ""
+
+#: apps/accounts/models.py:37
+msgid "El superusuario debe tener is_staff=True"
+msgstr ""
+
+#: apps/accounts/models.py:39
+msgid "El superusuario debe tener is_superuser=True"
+msgstr ""
+
+#: apps/accounts/models.py:48
+msgid "correo electrónico"
+msgstr ""
+
+#: apps/accounts/models.py:51
+msgid "es instructor"
+msgstr ""
+
+#: apps/accounts/models.py:54
+msgid "idioma preferido"
+msgstr ""
+
+#: apps/accounts/models.py:63
+msgid "usuario"
+msgstr ""
+
+#: apps/accounts/models.py:64
+msgid "usuarios"
+msgstr ""
+
+#: apps/assessments/models.py:17
+msgid "calificación mínima"
+msgstr ""
+
+#: apps/assessments/models.py:18
+msgid "Porcentaje requerido para aprobar."
+msgstr ""
+
+#: apps/certificates/models.py:27
+msgid "bloqueo administrativo"
+msgstr ""
+
+#: apps/commerce/models.py:24
+msgid "Pendiente"
+msgstr ""
+
+#: apps/commerce/models.py:25
+msgid "Pagada"
+msgstr ""
+
+#: apps/commerce/models.py:26
+msgid "Entregada"
+msgstr ""
+
+#: apps/commerce/models.py:28
+msgid "Reembolsada"
+msgstr ""
+
+#: apps/commerce/models.py:47
+msgid "Curso"
+msgstr ""
+
+#: apps/commerce/models.py:48
+msgid "Producto editorial"
+msgstr ""
+
+#: apps/library/models.py:27
+msgid "Registrado (Nivel 1)"
+msgstr ""
+
+#: apps/library/models.py:28
+msgid "Inscrito (Nivel 2)"
+msgstr ""
+
+#: apps/publishing/models.py:14
+msgid "Digital"
+msgstr ""
+
+#: apps/publishing/models.py:15
+msgid "Físico"
+msgstr ""
+
+#: apps/publishing/models.py:16
+msgid "Ambos formatos"
+msgstr ""
+
+#: apps/publishing/models.py:38
+msgid "Nulo = sin límite. Permite limitar descargas por política."
+msgstr ""
+
+#: templates/academy/course_detail.html:7
+msgid "Tienes acceso completo a este curso."
+msgstr ""
+
+#: templates/academy/course_detail.html:9
+msgid "Matricúlate para acceder al contenido completo."
+msgstr ""
+
+#: templates/academy/course_detail.html:15
+msgid "muestra"
+msgstr ""
+
+#: templates/academy/course_list.html:4 templates/base.html:15
+msgid "Cursos"
+msgstr ""
+
+#: templates/academy/course_list.html:9
+msgid "No hay cursos publicados."
+msgstr ""
+
+#: templates/academy/lesson_detail.html:8
+msgid "Abrir"
+msgstr ""
+
+#: templates/accounts/dashboard.html:4 templates/base.html:19
+msgid "Mi panel"
+msgstr ""
+
+#: templates/accounts/dashboard.html:5 templates/certificates/verify.html:6
+msgid "Estado:"
+msgstr ""
+
+#: templates/accounts/dashboard.html:5
+msgid "Inscrito"
+msgstr ""
+
+#: templates/accounts/dashboard.html:5
+msgid "Registrado"
+msgstr ""
+
+#: templates/accounts/dashboard.html:10
+msgid "Aún no tienes matrículas."
+msgstr ""
+
+#: templates/accounts/login.html:4 templates/accounts/login.html:6
+#: templates/base.html:24
+msgid "Entrar"
+msgstr ""
+
+#: templates/accounts/signup.html:4 templates/base.html:25
+msgid "Registro"
+msgstr ""
+
+#: templates/accounts/signup.html:6
+msgid "Crear cuenta"
+msgstr ""
+
+#: templates/base.html:16
+msgid "Herramientas"
+msgstr ""
+
+#: templates/base.html:21
+msgid "Salir"
+msgstr ""
+
+#: templates/certificates/verify.html:4
+msgid "Verificación de certificado"
+msgstr ""
+
+#: templates/certificates/verify.html:5
+msgid "Identificador:"
+msgstr ""
+
+#: templates/certificates/verify.html:6
+msgid "Válido"
+msgstr ""
+
+#: templates/certificates/verify.html:6
+msgid "No válido"
+msgstr ""
+
+#: templates/certificates/verify.html:7
+msgid "Emitido:"
+msgstr ""
+
+#: templates/institutional/home.html:6
+msgid "Cursos en línea, libros digitales y recursos de investigación."
+msgstr ""

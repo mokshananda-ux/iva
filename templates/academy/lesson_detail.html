@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block content %}
+<h1 class="text-xl font-bold">{{ lesson.title }}</h1>
+{% for resource in lesson.resources.all %}
+    <div>
+        <strong>{{ resource.get_kind_display }}</strong>
+        {% if resource.external_url %}<a href="{{ resource.external_url }}">{% trans "Abrir" %}</a>{% endif %}
+    </div>
+{% endfor %}
+{% endblock %}

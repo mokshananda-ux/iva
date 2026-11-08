@@ -1,0 +1,312 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-07 11:54-0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: apps/academy/models.py:53
+#, fuzzy
+msgid "es lección de muestra"
+msgstr "exemplo de lição"
+
+#: apps/academy/models.py:54
+#, fuzzy
+msgid "Visible para registrados sin matrícula."
+msgstr "Visível para usuários registrados, sem necessidade de matrícula."
+
+#: apps/academy/models.py:69
+#, fuzzy
+msgid "Vídeo"
+msgstr "Vídeo"
+
+#: apps/academy/models.py:70
+#, fuzzy
+msgid "PDF"
+msgstr "Arquivo PDF"
+
+#: apps/academy/models.py:71
+#, fuzzy
+msgid "Quiz"
+msgstr "Teste"
+
+#: apps/academy/models.py:72
+#, fuzzy
+msgid "Lab"
+msgstr "Laboratório"
+
+#: apps/academy/models.py:73
+#, fuzzy
+msgid "Foro"
+msgstr "Fórum"
+
+#: apps/academy/models.py:93
+#, fuzzy
+msgid "Pendiente de pago"
+msgstr "A vencer"
+
+#: apps/academy/models.py:94
+#, fuzzy
+msgid "Activa"
+msgstr "Ativo"
+
+#: apps/academy/models.py:95
+#, fuzzy
+msgid "Suspendida"
+msgstr "Suspenso"
+
+#: apps/academy/models.py:96 apps/commerce/models.py:27
+#, fuzzy
+msgid "Cancelada"
+msgstr "Cancelado"
+
+#: apps/accounts/admin.py:16
+#, fuzzy
+msgid "Datos"
+msgstr "Dados"
+
+#: apps/accounts/admin.py:17
+#, fuzzy
+msgid "Roles"
+msgstr "Papéis"
+
+#: apps/accounts/models.py:21
+#, fuzzy
+msgid "El email es obligatorio"
+msgstr "É necessário fornecer um endereço de e-mail."
+
+#: apps/accounts/models.py:37
+#, fuzzy
+msgid "El superusuario debe tener is_staff=True"
+msgstr "O usuário super deve ter is_staff=True"
+
+#: apps/accounts/models.py:39
+#, fuzzy
+msgid "El superusuario debe tener is_superuser=True"
+msgstr "O usuário super deve ter is_superuser=True"
+
+#: apps/accounts/models.py:48
+#, fuzzy
+msgid "correo electrónico"
+msgstr "e-mail"
+
+#: apps/accounts/models.py:51
+#, fuzzy
+msgid "es instructor"
+msgstr "Instrutor"
+
+#: apps/accounts/models.py:54
+#, fuzzy
+msgid "idioma preferido"
+msgstr "Idioma preferido"
+
+#: apps/accounts/models.py:63
+#, fuzzy
+msgid "usuario"
+msgstr "usuário"
+
+#: apps/accounts/models.py:64
+#, fuzzy
+msgid "usuarios"
+msgstr "usuários"
+
+#: apps/assessments/models.py:17
+#, fuzzy
+msgid "calificación mínima"
+msgstr "nota mínima"
+
+#: apps/assessments/models.py:18
+#, fuzzy
+msgid "Porcentaje requerido para aprobar."
+msgstr "Porcentagem mínima exigida para aprovação."
+
+#: apps/certificates/models.py:27
+#, fuzzy
+msgid "bloqueo administrativo"
+msgstr "bloqueio administrativo"
+
+#: apps/commerce/models.py:24
+#, fuzzy
+msgid "Pendiente"
+msgstr "Em aberto"
+
+#: apps/commerce/models.py:25
+#, fuzzy
+msgid "Pagada"
+msgstr "Paga"
+
+#: apps/commerce/models.py:26
+#, fuzzy
+msgid "Entregada"
+msgstr "Entregue"
+
+#: apps/commerce/models.py:28
+#, fuzzy
+msgid "Reembolsada"
+msgstr "Reembolsado"
+
+#: apps/commerce/models.py:47
+#, fuzzy
+msgid "Curso"
+msgstr "Curso"
+
+#: apps/commerce/models.py:48
+#, fuzzy
+msgid "Producto editorial"
+msgstr "Produto editorial"
+
+#: apps/library/models.py:27
+#, fuzzy
+msgid "Registrado (Nivel 1)"
+msgstr "Registrado (Nível 1)"
+
+#: apps/library/models.py:28
+#, fuzzy
+msgid "Inscrito (Nivel 2)"
+msgstr "Inscrito (Nível 2)"
+
+#: apps/publishing/models.py:14
+#, fuzzy
+msgid "Digital"
+msgstr "Digital"
+
+#: apps/publishing/models.py:15
+#, fuzzy
+msgid "Físico"
+msgstr "Física"
+
+#: apps/publishing/models.py:16
+#, fuzzy
+msgid "Ambos formatos"
+msgstr "Ambos formatos"
+
+#: apps/publishing/models.py:38
+#, fuzzy
+msgid "Nulo = sin límite. Permite limitar descargas por política."
+msgstr ""
+"Nulo = sem limite. Permite definir limites de downloads de acordo com uma "
+"política."
+
+#: templates/academy/course_detail.html:7
+#, fuzzy
+msgid "Tienes acceso completo a este curso."
+msgstr "Você tem acesso completo a este curso."
+
+#: templates/academy/course_detail.html:9
+#, fuzzy
+msgid "Matricúlate para acceder al contenido completo."
+msgstr "Inscreva-se para ter acesso ao conteúdo completo."
+
+#: templates/academy/course_detail.html:15
+#, fuzzy
+msgid "muestra"
+msgstr "exemplo"
+
+#: templates/academy/course_list.html:4 templates/base.html:15
+#, fuzzy
+msgid "Cursos"
+msgstr "Cursos"
+
+#: templates/academy/course_list.html:9
+#, fuzzy
+msgid "No hay cursos publicados."
+msgstr "Não há cursos disponíveis."
+
+#: templates/academy/lesson_detail.html:8
+#, fuzzy
+msgid "Abrir"
+msgstr "Abrir"
+
+#: templates/accounts/dashboard.html:4 templates/base.html:19
+#, fuzzy
+msgid "Mi panel"
+msgstr "Meu painel"
+
+#: templates/accounts/dashboard.html:5 templates/certificates/verify.html:6
+#, fuzzy
+msgid "Estado:"
+msgstr "Estado:"
+
+#: templates/accounts/dashboard.html:5
+#, fuzzy
+msgid "Inscrito"
+msgstr "Inscrito"
+
+#: templates/accounts/dashboard.html:5
+#, fuzzy
+msgid "Registrado"
+msgstr "Registrado"
+
+#: templates/accounts/dashboard.html:10
+#, fuzzy
+msgid "Aún no tienes matrículas."
+msgstr "Ainda não possui as matrículas."
+
+#: templates/accounts/login.html:4 templates/accounts/login.html:6
+#: templates/base.html:24
+#, fuzzy
+msgid "Entrar"
+msgstr "Entrar"
+
+#: templates/accounts/signup.html:4 templates/base.html:25
+#, fuzzy
+msgid "Registro"
+msgstr "Registro"
+
+#: templates/accounts/signup.html:6
+#, fuzzy
+msgid "Crear cuenta"
+msgstr "Criar conta"
+
+#: templates/base.html:16
+#, fuzzy
+msgid "Herramientas"
+msgstr "Ferramentas"
+
+#: templates/base.html:21
+#, fuzzy
+msgid "Salir"
+msgstr "Sair"
+
+#: templates/certificates/verify.html:4
+#, fuzzy
+msgid "Verificación de certificado"
+msgstr "Verificação de certificado"
+
+#: templates/certificates/verify.html:5
+#, fuzzy
+msgid "Identificador:"
+msgstr "Identificador:"
+
+#: templates/certificates/verify.html:6
+#, fuzzy
+msgid "Válido"
+msgstr "Válido"
+
+#: templates/certificates/verify.html:6
+#, fuzzy
+msgid "No válido"
+msgstr "Inválido"
+
+#: templates/certificates/verify.html:7
+#, fuzzy
+msgid "Emitido:"
+msgstr "Transmitido:"
+
+#: templates/institutional/home.html:6
+#, fuzzy
+msgid "Cursos en línea, libros digitales y recursos de investigación."
+msgstr "Cursos online, livros digitais e recursos de pesquisa."

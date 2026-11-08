@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block content %}
+<h1 class="text-xl font-bold">{% trans "Verificación de certificado" %}</h1>
+<p>{% trans "Identificador:" %} {{ certificate.public_id }}</p>
+<p>{% trans "Estado:" %} {% if certificate.is_valid %}{% trans "Válido" %}{% else %}{% trans "No válido" %}{% endif %}</p>
+<p>{% trans "Emitido:" %} {{ certificate.issued_at }}</p>
+{% endblock %}

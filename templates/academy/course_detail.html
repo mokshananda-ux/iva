@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block content %}
+<h1 class="text-xl font-bold">{{ course.title }}</h1>
+<p>{{ course.summary }}</p>
+{% if has_access %}
+    <p>{% trans "Tienes acceso completo a este curso." %}</p>
+{% else %}
+    <p>{% trans "Matricúlate para acceder al contenido completo." %}</p>
+{% endif %}
+{% for module in course.modules.all %}
+    <h2>{{ module.title }}</h2>
+    <ul>
+        {% for lesson in module.lessons.all %}
+            <li><a href="{% url 'academy:lesson_detail' lesson.pk %}">{{ lesson.title }}{% if lesson.is_sample %} ({% trans "muestra" %}){% endif %}</a></li>
+        {% endfor %}
+    </ul>
+{% endfor %}
+{% endblock %}

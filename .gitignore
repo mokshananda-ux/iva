@@ -1,0 +1,43 @@
+# Entorno virtual
+env/
+venv/
+ENV/
+
+# Archivos compilados de Python
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Archivos multimedia subidos por usuarios (¡Muy importante!)
+media/
+
+# Base de datos local (por si usas SQLite por defecto en desarrollo)
+*.sqlite3
+*.db
+
+# Archivos de entorno y credenciales (NUNCA los subas si los creas después)
+.env
+*.env
+
+# Archivos del sistema operativo o editores
+.DS_Store
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+__pycache__/
+*.py[cod]
+*.sqlite3
+
+/staticfiles/
+/media/
+/protected_media/
+.venv/
+venv/
+.coverage
+.pytest_cache/
+*.log
