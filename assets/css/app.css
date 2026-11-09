@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+/* 
+========================================
+ IMPORTACIÓN DE TIPOGRAFÍAS (Google Fonts)
+ Se añaden los subsets 'devanagari' y 'latin-ext' para IAST
+========================================
+*/
+@import url('https://googleapis.com');
+
+/*
+========================================
+ INSTITUTO VAK ADVAITA
+ Sistema de diseño institucional
+========================================
+*/
+
+/* Detección de plantillas Django */
+@source "../../templates";
+
+/* Identidad visual */
+@theme {
+    --color-iva-zaffron: #F4C430;
+    --color-iva-olive: #808000;
+    --color-iva-ivory: #FFFFF0;
+    --color-iva-ochre: #CC7722;
+    --color-iva-charcoal: #1C1917; /* Añadida variable faltante para evitar fallos de renderizado */
+
+    --color-iva-background: #FAF9F6;
+    --color-iva-surface: #FFFFFF;
+    --color-iva-muted: #78716C;
+    --color-iva-border: #E7E2D9;
+
+    /* Tipografía */
+    --font-sans: "Noto Sans Devanagari", "Inter", "Segoe UI", sans-serif;
+    --font-academic: "Noto Serif Devanagari", Georgia, "Times New Roman", serif;
+
+    /* Bordes */
+    --radius-card: 0.75rem;
+}
+
+/* Estilos globales */
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        min-height: 100vh;
+        font-family: var(--font-sans);
+        background-color: var(--color-iva-background);
+        color: var(--color-iva-charcoal);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+
+        /* Habilitación de ligaduras complejas indispensables para Devanagari e IAST */
+        font-variant-ligatures: common-ligatures;
+        text-rendering: optimizeLegibility;
+    }
+
+    h1,
+    h2,
+    h3 {
+        color: var(--color-iva-charcoal);
+        text-wrap: balance;
+        font-family: var(--font-academic); /* Configurado por defecto para títulos académicos */
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    button,
+    input,
+    textarea,
+    select {
+        font: inherit;
+    }
+
+    ::selection {
+        background-color: var(--color-iva-ochre);
+        color: white;
+    }
+
+    :focus-visible {
+        outline: 2px solid var(--color-iva-ochre);
+        outline-offset: 3px;
+    }
+}

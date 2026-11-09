@@ -1,0 +1,29 @@
+
+{% load i18n %}
+
+<footer class="mt-auto border-t border-iva-border bg-white">
+
+    <div class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+
+        <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+
+            <div>
+                <p class="font-academic text-xl font-bold text-iva-ochre">
+                    Instituto Vak Advaita
+                </p>
+
+                <p class="mt-2 text-sm text-stone-500">
+                    {% trans "Conocimiento, estudio e investigación." %}
+                </p>
+            </div>
+
+            <p class="text-sm text-stone-500">
+                © {% now "Y" %} Instituto Vak Advaita.
+                {% trans "Todos los derechos reservados." %}
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
