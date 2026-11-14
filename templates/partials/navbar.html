@@ -1,4 +1,5 @@
 {% load i18n %}
+{% load static %}
 
 <header class="sticky top-0 z-40 border-b border-iva-border bg-white/95 backdrop-blur">
 
@@ -7,10 +8,13 @@
 
         <!-- Identidad institucional -->
         <a href="{% url 'institutional:home' %}"
-           class="font-academic text-2xl font-bold tracking-tight text-iva-brown">
-            IVA
-            <span class="sr-only">Instituto Vak Advaita</span>
+           class="flex items-center">
+            <img src="{% static 'img/logo.jpg' %}"
+                 alt="Instituto Vāk Advaita"
+                 class="h-12 w-auto object-contain">
+            <span class="sr-only">Instituto Vāk Advaita</span>
         </a>
+
 
         <!-- Navegación de escritorio -->
         <div class="hidden items-center gap-8 md:flex">
@@ -59,7 +63,7 @@
                 </a>
 
                 <a href="{% url 'accounts:signup' %}"
-                   class="rounded-lg bg-iva-brown px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-iva-ochre">
+                   class="rounded-lg bg-iva-ochre px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-iva-ochre">
                     {% trans "Registro" %}
                 </a>
 

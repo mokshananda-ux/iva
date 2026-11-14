@@ -1,19 +1,228 @@
 {% extends 'base.html' %}
 {% load i18n %}
+{% load static %}
+
 {% block content %}
-<h1 class="text-xl font-bold">{{ course.title }}</h1>
-<p>{{ course.summary }}</p>
-{% if has_access %}
-    <p>{% trans "Tienes acceso completo a este curso." %}</p>
-{% else %}
-    <p>{% trans "Matricúlate para acceder al contenido completo." %}</p>
-{% endif %}
-{% for module in course.modules.all %}
-    <h2>{{ module.title }}</h2>
-    <ul>
-        {% for lesson in module.lessons.all %}
-            <li><a href="{% url 'academy:lesson_detail' lesson.pk %}">{{ lesson.title }}{% if lesson.is_sample %} ({% trans "muestra" %}){% endif %}</a></li>
-        {% endfor %}
-    </ul>
-{% endfor %}
+
+<main class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+
+    <!-- 1. ENCABEZADO DEL CURSO -->
+
+    <section class="mb-10">
+
+        <p class="mb-3 text-sm font-medium uppercase tracking-widest text-stone-500">
+            {% trans "Academia" %} / {% trans "Detalle del curso" %}
+        </p>
+
+        <h1 class="mb-5 font-academic text-3xl font-bold text-iva-charcoal md:text-4xl">
+            {{ course.title }}
+        </h1>
+
+        <p class="max-w-3xl text-base leading-8 text-stone-600 md:text-lg">
+            {{ course.summary }}
+        </p>
+
+    </section>
+
+
+    <!-- 2. IMAGEN PRINCIPAL -->
+
+    <section class="mb-12">
+
+        <div class="overflow-hidden rounded-xl border border-iva-border bg-iva-ivory">
+
+            <img
+                src="{% static 'img/courses/course-banner.jpg' %}"
+                alt="{% trans 'Imagen ilustrativa del curso' %}"
+                class="h-56 w-full object-cover md:h-80"
+            >
+
+        </div>
+
+    </section>
+
+
+    <!-- 3. CONTENIDO PRINCIPAL Y PANEL LATERAL -->
+
+    <div class="grid grid-cols-1 gap-10 lg:grid-cols-3">
+
+
+        <!-- PROGRAMA ACADÉMICO -->
+
+        <section class="lg:col-span-2">
+
+            <div class="mb-8 border-b border-iva-border pb-4">
+
+                <p class="mb-2 text-xs font-semibold uppercase tracking-widest text-iva-ochre">
+                    {% trans "Contenido académico" %}
+                </p>
+
+                <h2 class="font-academic text-2xl font-bold text-iva-charcoal">
+                    {% trans "Programa de estudios" %}
+                </h2>
+
+            </div>
+
+
+            <!-- LISTADO DE MÓDULOS -->
+
+            <div class="space-y-6">
+
+                {% for module in course.modules.all %}
+
+                    <article class="overflow-hidden rounded-xl border border-iva-border bg-white">
+
+                        <!-- TÍTULO DEL MÓDULO -->
+
+                        <div class="border-b border-iva-border bg-iva-ivory px-6 py-5">
+
+                            <p class="mb-1 text-xs font-medium uppercase tracking-wider text-stone-500">
+                                {% trans "Módulo" %} {{ forloop.counter }}
+                            </p>
+
+                            <h3 class="font-academic text-xl font-semibold text-iva-charcoal">
+                                {{ module.title }}
+                            </h3>
+
+                        </div>
+
+
+                        <!-- LECCIONES -->
+
+                        <div class="divide-y divide-iva-border px-6">
+
+                            {% for lesson in module.lessons.all %}
+
+                                <div class="flex flex-col gap-3 py-5 sm:flex-row sm:items-center sm:justify-between">
+
+                                    <div class="flex items-start gap-4">
+
+                                        <span class="mt-1 text-sm font-medium text-stone-500">
+                                            {{ forloop.counter|stringformat:"02d" }}
+                                        </span>
+
+                                        <div>
+
+                                            <a
+                                                href="{% url 'academy:lesson_detail' lesson.pk %}"
+                                                class="font-medium text-iva-charcoal transition-colors hover:text-iva-ochre"
+                                            >
+                                                {{ lesson.title }}
+                                            </a>
+
+                                            {% if lesson.is_sample %}
+
+                                                <p class="mt-2 text-xs font-semibold uppercase tracking-wider text-iva-ochre">
+                                                    {% trans "Lección de muestra" %}
+                                                </p>
+
+                                            {% endif %}
+
+                                        </div>
+
+                                    </div>
+
+                                    {% if lesson.is_sample %}
+
+                                        <span class="self-start rounded-full border border-iva-border px-3 py-1 text-xs text-stone-600">
+                                            {% trans "Acceso libre" %}
+                                        </span>
+
+                                    {% endif %}
+
+                                </div>
+
+                            {% empty %}
+
+                                <p class="py-6 text-sm text-stone-500">
+                                    {% trans "Este módulo todavía no tiene lecciones." %}
+                                </p>
+
+                            {% endfor %}
+
+                        </div>
+
+                    </article>
+
+                {% empty %}
+
+                    <div class="rounded-xl border border-iva-border bg-white p-8 text-center">
+
+                        <p class="text-stone-600">
+                            {% trans "El programa académico estará disponible próximamente." %}
+                        </p>
+
+                    </div>
+
+                {% endfor %}
+
+            </div>
+
+        </section>
+
+
+        <!-- PANEL LATERAL -->
+
+        <aside class="lg:col-span-1">
+
+            <div class="rounded-xl border border-iva-border bg-white p-6 lg:sticky lg:top-28">
+
+                <p class="mb-3 text-xs font-semibold uppercase tracking-widest text-iva-ochre">
+                    {% trans "Tu formación" %}
+                </p>
+
+                <h2 class="mb-5 font-academic text-xl font-bold text-iva-charcoal">
+                    {% trans "Acceso al curso" %}
+                </h2>
+
+                {% if has_access %}
+
+                    <div class="mb-5 rounded-lg bg-iva-ivory p-4">
+
+                        <p class="font-semibold text-iva-charcoal">
+                            {% trans "Tienes acceso completo a este curso." %}
+                        </p>
+
+                        <p class="mt-2 text-sm leading-6 text-stone-600">
+                            {% trans "Puedes continuar con tu formación y consultar las lecciones disponibles." %}
+                        </p>
+
+                    </div>
+
+                {% else %}
+
+                    <div class="mb-5 rounded-lg bg-iva-ivory p-4">
+
+                        <p class="font-semibold text-iva-charcoal">
+                            {% trans "Comienza tu formación" %}
+                        </p>
+
+                        <p class="mt-2 text-sm leading-6 text-stone-600">
+                            {% trans "Matricúlate para acceder al contenido completo del curso." %}
+                        </p>
+
+                    </div>
+
+                {% endif %}
+
+                <div class="border-t border-iva-border pt-5">
+
+                    <p class="text-sm leading-7 text-stone-600">
+                        {% trans "Instituto Vāk Advaita" %}
+                    </p>
+
+                    <p class="mt-2 text-xs leading-6 text-stone-500">
+                        {% trans "Formación académica y estudio de las tradiciones del conocimiento." %}
+                    </p>
+
+                </div>
+
+            </div>
+
+        </aside>
+
+    </div>
+
+</main>
+
 {% endblock %}
